@@ -3,7 +3,7 @@ package com.example.demo;
 import java.time.LocalDate;
 
 import org.springframework.stereotype.Component;
-import com.example.demo.IUserNotifier.NotificationType;
+import com.example.demo.IUserNotifier.Timing;
 
 @Component
 public class HelloService implements IHelloService {
@@ -18,7 +18,7 @@ public class HelloService implements IHelloService {
     @Override
     public void sayHello() {
         var emp = new Employee("Taro", LocalDate.of(1990, 10, 1), "Sales");
-        this.notification.notify(NotificationType.NORMAL, String.format("Hello, %s!!", emp));
+        this.notification.notify(Timing.NORMAL, String.format("Hello, %s!!", emp));
     }
 }
 

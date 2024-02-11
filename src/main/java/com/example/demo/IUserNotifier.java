@@ -1,11 +1,11 @@
 package com.example.demo;
 
 public interface IUserNotifier {
-    enum NotificationType{
+    enum Timing{
         IMMEDIATE,
         DELAYED,
         NORMAL
     }
 
-    void notify(NotificationType type, String msg);
+    void notify(Timing type, String msg);
 }
